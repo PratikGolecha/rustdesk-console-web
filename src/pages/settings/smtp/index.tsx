@@ -52,7 +52,7 @@ const SMTPSettings: React.FC = () => {
           port: config.port,
           secure: config.secure,
           user: config.user || '',
-          pass: config.user ? '******' : '', // 有用户名时显示脱敏占位符，无认证时为空
+          pass: config.user ? '******' : '', // Show a masked placeholder when a username is set, empty when there is no auth
           from: config.from,
           enabled: config.enabled,
         });
@@ -60,10 +60,10 @@ const SMTPSettings: React.FC = () => {
     } catch (error: any) {
       console.error('Failed to fetch SMTP config:', error);
       if (error?.response?.status === 404) {
-        // 404 表示配置不存在，这是正常情况，不需要显示错误提示
+        // 404 means no config exists yet, which is normal; no error toast needed
         setConfigExists(false);
       } else {
-        // 其他错误重新抛出，让全局错误处理器处理
+        // Rethrow other errors for the global error handler
         throw error;
       }
     } finally {
@@ -76,7 +76,7 @@ const SMTPSettings: React.FC = () => {
       const values = await form.validateFields();
       setSaving(true);
 
-      // 如果密码是脱敏占位符，不传递密码字段
+      // If the password is the masked placeholder, do not send the password field
       const submitData: any = {
         host: values.host,
         port: values.port,
@@ -101,12 +101,12 @@ const SMTPSettings: React.FC = () => {
         }),
       );
 
-      // 重新加载配置
+      // Reload the configuration
       await fetchConfig();
     } catch (error: any) {
       console.error('Failed to save SMTP config:', error);
       if (error?.errorFields) {
-        // 表单验证错误，不需要显示消息
+        // Form validation error; no message needed
         return;
       }
       messageApi.error(
@@ -130,7 +130,7 @@ const SMTPSettings: React.FC = () => {
       ]);
       setTesting(true);
 
-      // 构建测试数据
+      // Build test data
       const testData: any = {
         host: values.host,
         port: values.port,
@@ -142,7 +142,7 @@ const SMTPSettings: React.FC = () => {
         testData.user = values.user;
       }
 
-      // 如果密码不是脱敏占位符，使用表单中的密码
+      // If the password is not the masked placeholder, use the one from the form
       const password = form.getFieldValue('pass');
       if (password && password !== '******') {
         testData.pass = password;
@@ -170,7 +170,7 @@ const SMTPSettings: React.FC = () => {
     } catch (error: any) {
       console.error('Failed to test SMTP config:', error);
       if (error?.errorFields) {
-        // 表单验证错误
+        // Form validation error
         return;
       }
       messageApi.error(
