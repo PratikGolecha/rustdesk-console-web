@@ -30,3 +30,16 @@ container. The `Dockerfile` does the same build inside Docker.
 
 - `npm ci` runs `max setup` (postinstall) and takes a few minutes; the build itself is ~2 s.
 - 7 tests in `src/pages/roles` and `ShareAccessModal` fail on upstream `main` as well.
+
+## Pro-parity pages added in this fork (2026-09)
+
+Access rules editor (User groups -> Access), Client setup page, API tokens (Settings), Control roles, categorised Strategy editor with presets,
+and the browser Web client (`/web-client`, assets fetched by `scripts/fetch-web-client.sh` - run it before `npm run build`, or with a `dist/webclient`
+argument for a bind-mounted `dist/`). nginx needs the `/webclient/` and `/webclient-config/index.js` rules from `nginx.conf.template`.
+
+## Acknowledgements and licences
+
+The web client assets are RustDesk's web client v1 (AGPL-3.0, Purslane Ltd.) as redistributed in the [lejianwen/rustdesk-api](https://github.com/lejianwen/rustdesk-api)
+v2.7 release (MIT project); the script pins the version and verifies a sha256. UI structure follows the base project
+[databk/rustdesk-console-web](https://github.com/databk/rustdesk-console-web). Feature behaviour was checked against RustDesk Server Pro's public docs and the
+RustDesk client source.
