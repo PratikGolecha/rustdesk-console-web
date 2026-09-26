@@ -25,6 +25,7 @@ const StrategyForm: React.FC<StrategyFormProps> = ({
   const [form] = Form.useForm();
   const isEdit = mode === 'edit';
   const isView = mode === 'view';
+  const [hasCustom, setHasCustom] = useState(false);
   const [configOptions, setConfigOptions] = useState<Record<string, string>>(
     {},
   );
@@ -53,6 +54,8 @@ const StrategyForm: React.FC<StrategyFormProps> = ({
         note: values.note || undefined,
         config_options:
           Object.keys(configOptions).length > 0 ? configOptions : undefined,
+        // Only opt in to unvalidated keys when the admin actually has some.
+        allow_custom: hasCustom || undefined,
       };
       return await onFinish(submitData);
     } catch {
@@ -145,6 +148,7 @@ const StrategyForm: React.FC<StrategyFormProps> = ({
       <ConfigOptionsForm
         value={configOptions}
         onChange={setConfigOptions}
+        onHasCustomChange={setHasCustom}
         disabled={isView}
       />
     </ModalForm>
