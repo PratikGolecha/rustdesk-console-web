@@ -575,6 +575,14 @@ declare namespace API {
     [key: string]: any;
   };
 
+  type WebClientConfig = {
+    enabled: boolean;
+    id_server: string;
+    relay_server: string;
+    api_server: string;
+    key: string;
+  };
+
   type UpdateCheckParams = {
     frontend_version: string;
   };

@@ -2,6 +2,7 @@ export default {
   'menu.user.center': 'Account',
   'menu.dashboard': 'Dashboard',
   'menu.devices': 'Devices',
+  'menu.webClient': 'Web Client',
   'menu.addressBook': 'Address Books',
   'menu.addressBook.personal': 'Personal',
   'menu.addressBook.shared': 'Shared',

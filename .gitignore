@@ -40,3 +40,6 @@ build
 
 # rust
 server/target
+
+# Browser client assets fetched by scripts/fetch-web-client.sh
+/public/webclient

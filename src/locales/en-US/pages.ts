@@ -1179,4 +1179,14 @@ export default {
     'GitHub authentication helps us verify that you are a real user, preventing automated abuse of build resources. We only request your public data — no access to your repositories, personal data, or any other permissions is needed.',
   'pages.nexus.repoWhyInteract':
     "I'm a high school student developing this project in my spare time. Your Star, Fork, or Watch means a lot to me — it not only keeps me motivated, but also helps with my college applications. This is the only thing I ask for in return. Thank you so much for your support!",
+  'pages.webClient.openNewTab': 'Open in new tab',
+  'pages.webClient.disabled': 'The web client is disabled on this server.',
+  'pages.webClient.missing': 'The web client is not installed on this server.',
+  'pages.webClient.missingDesc':
+    'Run scripts/fetch-web-client.sh when building the web UI (see docs/WEB-CLIENT.md).',
+  'pages.webClient.hint':
+    'Enter the device ID and the permanent password of the target device. The browser connects through this server (WebSocket ports 21118/21119).',
+  'pages.webClient.noKey':
+    'No server key is configured (WEB_CLIENT_KEY or RUSTDESK_KEY_FILE); connections to a server that enforces a key will fail.',
+  'pages.webClient.idServer': 'ID server',
 };

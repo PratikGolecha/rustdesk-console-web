@@ -42,6 +42,15 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
+  // The browser (web) client is a separate app with its own service worker and a
+  // dynamic config script: never cache or intercept it here.
+  if (
+    url.pathname.startsWith(appUrl('webclient/')) ||
+    url.pathname.startsWith(appUrl('webclient-config/'))
+  ) {
+    return;
+  }
+
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
