@@ -1277,4 +1277,14 @@ export default {
   'pages.apiTokens.assign.note': 'Device note',
   'pages.apiTokens.assign.device_username': 'Device username',
   'pages.apiTokens.assign.device_name': 'Device name',
+  'pages.webClient.openNewTab': 'Open in new tab',
+  'pages.webClient.disabled': 'The web client is disabled on this server.',
+  'pages.webClient.missing': 'The web client is not installed on this server.',
+  'pages.webClient.missingDesc':
+    'Run scripts/fetch-web-client.sh when building the web UI (see docs/WEB-CLIENT.md).',
+  'pages.webClient.hint':
+    'Enter the device ID and the permanent password of the target device. The browser connects through this server (WebSocket ports 21118/21119).',
+  'pages.webClient.noKey':
+    'No server key is configured (WEB_CLIENT_KEY or RUSTDESK_KEY_FILE); connections to a server that enforces a key will fail.',
+  'pages.webClient.idServer': 'ID server',
 };

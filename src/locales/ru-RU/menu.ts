@@ -2,6 +2,7 @@ export default {
   'menu.user.center': 'Аккаунт',
   'menu.dashboard': 'Панель управления',
   'menu.devices': 'Устройства',
+  'menu.webClient': 'Web Client',
   'menu.addressBook': 'Адресные книги',
   'menu.addressBook.personal': 'Личные',
   'menu.addressBook.shared': 'Общие',

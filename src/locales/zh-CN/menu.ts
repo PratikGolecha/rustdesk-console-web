@@ -2,6 +2,7 @@ export default {
   'menu.user.center': '个人中心',
   'menu.dashboard': '仪表盘',
   'menu.devices': '设备管理',
+  'menu.webClient': 'Web Client',
   'menu.addressBook': '地址簿',
   'menu.addressBook.personal': '个人地址簿',
   'menu.addressBook.shared': '共享地址簿',
