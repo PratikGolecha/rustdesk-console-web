@@ -1129,4 +1129,30 @@ declare namespace API {
     files?: string[];
     message?: string;
   };
+
+  type ApiTokenScope = 'assign' | 'read' | 'manage';
+
+  type ApiToken = {
+    guid: string;
+    name: string;
+    token_prefix: string;
+    scopes: ApiTokenScope[];
+    owner_guid: string;
+    owner_name: string | null;
+    status: 'active' | 'expired' | 'revoked';
+    expires_at: string | null;
+    revoked_at: string | null;
+    last_used_at: string | null;
+    last_used_ip: string | null;
+    created_at: string;
+  };
+
+  type CreateApiTokenParams = {
+    name: string;
+    scopes: ApiTokenScope[];
+    expires_at?: string;
+  };
+
+  /** Create response: the plaintext token is only ever returned here. */
+  type CreatedApiToken = ApiToken & { token: string };
 }

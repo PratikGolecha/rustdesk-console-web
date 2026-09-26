@@ -22,6 +22,7 @@ export default {
   'menu.settings.smtp': 'Настройки SMTP',
   'menu.settings.oidcProviders': 'Провайдеры OIDC',
   'menu.settings.ldap': 'Настройки LDAP',
+  'menu.settings.apiTokens': 'API Tokens',
   'menu.customClients': 'Пользовательские клиенты',
   'menu.list.audit-list': 'Список аудита',
   'menu.list.audit-list.File': 'Передача файлов',

@@ -22,6 +22,7 @@ export default {
   'menu.settings.smtp': 'SMTP 配置',
   'menu.settings.oidcProviders': 'OIDC 提供商',
   'menu.settings.ldap': 'LDAP 配置',
+  'menu.settings.apiTokens': 'API Tokens',
   'menu.customClients': '自定义客户端',
   'menu.list.audit-list': '审计列表',
   'menu.list.audit-list.File': '文件传输',
