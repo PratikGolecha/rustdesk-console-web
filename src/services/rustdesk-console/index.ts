@@ -132,3 +132,4 @@ export {
   togglePasskeyTfa,
 } from './passkey';
 export { getSessions, revokeSession } from './session';
+export { getApiTokenList, createApiToken, revokeApiToken } from './apiToken';

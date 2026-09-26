@@ -51,6 +51,10 @@ export default function access(
     canAuditView,
     canAuditConnectionAccess: canAuditView || canDevicesDisconnect,
     canGroups: isSuperAdmin || hasPermission('user_groups.view'),
+    canApiTokensView: hasPermission('api_tokens.view'),
+    canApiTokensCreate: hasPermission('api_tokens.create'),
+    canApiTokensRevoke: hasPermission('api_tokens.revoke'),
+    canSettingsAccess: isSuperAdmin || hasPermission('api_tokens.view'),
     canRolesView: hasPermission('roles.view'),
     canRolesAssign:
       hasPermission('roles.assign') &&
