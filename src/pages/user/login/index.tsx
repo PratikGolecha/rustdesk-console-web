@@ -598,7 +598,7 @@ const Login: React.FC = () => {
                   icon={<KeyOutlined />}
                   loading={submitting}
                   onClick={handlePasskeyLogin}
-                  style={{ marginTop: 16 }}
+                  className={styles.passkeyButton}
                 >
                   {intl.formatMessage({
                     id: 'pages.login.passkey.login',
