@@ -174,6 +174,12 @@ export default [
     component: './custom-client',
   },
   {
+    path: '/client-setup',
+    name: 'clientSetup',
+    icon: 'download',
+    component: './client-setup',
+  },
+  {
     path: '/settings',
     name: 'settings',
     icon: 'setting',
