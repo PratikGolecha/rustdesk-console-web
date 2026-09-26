@@ -221,7 +221,7 @@ declare namespace API {
     display_name?: string;
     email: string;
     note: string;
-    status: number; // -1=未验证, 0=禁用, 1=正常
+    status: number; // -1=unverified, 0=disabled, 1=normal
     is_admin: boolean;
     is_protected?: boolean;
     third_auth_type?: string;
@@ -264,7 +264,7 @@ declare namespace API {
 
   type BatchUpdateUserStatusParams = {
     user_guids: string[];
-    status: number; // -1=未验证, 0=禁用, 1=正常
+    status: number; // -1=unverified, 0=disabled, 1=normal
   };
 
   type BatchUpdateUserSecurityParams = {

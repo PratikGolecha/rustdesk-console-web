@@ -1,7 +1,7 @@
 import { request } from '@umijs/max';
 
 /**
- * 获取 LDAP 配置
+ * Get LDAP configuration
  */
 export async function getLdapConfig() {
   return request<API.LdapConfig>('/api/settings/ldap', {
@@ -11,7 +11,7 @@ export async function getLdapConfig() {
 }
 
 /**
- * 创建或更新 LDAP 配置
+ * Create or update LDAP configuration
  */
 export async function updateLdapConfig(data: API.UpdateLdapConfigParams) {
   return request<API.LdapConfig>('/api/settings/ldap', {
@@ -22,7 +22,7 @@ export async function updateLdapConfig(data: API.UpdateLdapConfigParams) {
 }
 
 /**
- * 测试 LDAP 连接
+ * Test LDAP connection
  */
 export async function testLdapConfig(data?: API.TestLdapConfigParams) {
   return request<API.TestLdapResult>('/api/settings/ldap/test', {

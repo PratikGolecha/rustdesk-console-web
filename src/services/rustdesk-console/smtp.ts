@@ -1,7 +1,7 @@
 import { request } from '@umijs/max';
 
 /**
- * 获取 SMTP 配置
+ * Get SMTP configuration
  */
 export async function getSMTPConfig() {
   return request<API.SMTPConfig>('/api/settings/smtp', {
@@ -11,7 +11,7 @@ export async function getSMTPConfig() {
 }
 
 /**
- * 更新 SMTP 配置
+ * Update SMTP configuration
  */
 export async function updateSMTPConfig(data: API.UpdateSMTPConfigParams) {
   return request<API.SMTPConfig>('/api/settings/smtp', {
@@ -22,7 +22,7 @@ export async function updateSMTPConfig(data: API.UpdateSMTPConfigParams) {
 }
 
 /**
- * 测试 SMTP 连接
+ * Test SMTP connection
  */
 export async function testSMTPConfig(data?: API.TestSMTPConfigParams) {
   return request<API.TestSMTPResult>('/api/settings/smtp/test', {

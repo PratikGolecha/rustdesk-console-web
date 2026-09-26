@@ -229,7 +229,7 @@ const CustomClientPage: React.FC = () => {
         setPendingBuildConfig(values);
         setPageState('repoRequired');
       } else if (
-        error?.data?.message?.includes('进行中') ||
+        error?.data?.message?.includes('in progress') ||
         error?.data?.message?.includes('ongoing') ||
         error?.response?.status === 409
       ) {
@@ -278,7 +278,7 @@ const CustomClientPage: React.FC = () => {
             }),
           );
         } else if (
-          error?.data?.message?.includes('进行中') ||
+          error?.data?.message?.includes('in progress') ||
           error?.data?.message?.includes('ongoing') ||
           error?.response?.status === 409
         ) {
@@ -322,7 +322,7 @@ const CustomClientPage: React.FC = () => {
       if (isRepoRequiredError(error)) {
         setPageState('repoRequired');
       } else if (
-        error?.data?.message?.includes('进行中') ||
+        error?.data?.message?.includes('in progress') ||
         error?.data?.message?.includes('ongoing') ||
         error?.response?.status === 409
       ) {

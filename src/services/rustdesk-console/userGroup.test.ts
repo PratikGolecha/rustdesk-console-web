@@ -85,10 +85,10 @@ test('loads every page of user groups and address-book rules', async () => {
 test('rejects RustDesk action error payloads and accepts empty success responses', async () => {
   requestMock
     .mockResolvedValueOnce('')
-    .mockResolvedValueOnce({ error: '设备不存在' });
+    .mockResolvedValueOnce({ error: 'Device does not exist' });
 
   await expect(addPeer('book-guid', { id: '123456789' })).resolves.toBe('');
   await expect(addPeer('book-guid', { id: 'missing' })).rejects.toThrow(
-    '设备不存在',
+    'Device does not exist',
   );
 });
