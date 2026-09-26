@@ -48,6 +48,8 @@ export default function access(
     canStrategiesAssign: hasPermission('strategies.assign'),
     canStrategiesAccess:
       hasPermission('strategies.view') || hasPermission('strategies.assign'),
+    canControlRolesView: hasPermission('control_roles.view'),
+    canControlRolesEdit: hasPermission('control_roles.edit'),
     canAuditView,
     canAuditConnectionAccess: canAuditView || canDevicesDisconnect,
     canGroups: isSuperAdmin || hasPermission('user_groups.view'),

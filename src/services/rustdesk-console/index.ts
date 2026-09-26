@@ -132,3 +132,4 @@ export {
   togglePasskeyTfa,
 } from './passkey';
 export { getSessions, revokeSession } from './session';
+export * from './controlRole';

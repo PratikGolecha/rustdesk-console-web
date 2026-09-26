@@ -14,6 +14,7 @@ export default {
   'menu.login': 'Login',
   'menu.roles': 'Roles',
   'menu.strategies': 'Strategies',
+  'menu.controlRoles': 'Control Roles',
   'menu.groups': 'Groups',
   'menu.groups.user': 'User Groups',
   'menu.groups.device': 'Device Groups',
