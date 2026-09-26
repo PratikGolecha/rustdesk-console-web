@@ -134,3 +134,4 @@ export {
 export { getSessions, revokeSession } from './session';
 export { getApiTokenList, createApiToken, revokeApiToken } from './apiToken';
 export { getWebClientConfig } from './webClient';
+export * from './controlRole';

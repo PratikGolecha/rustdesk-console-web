@@ -174,6 +174,13 @@ export default [
     component: './strategy',
   },
   {
+    path: '/control-roles',
+    name: 'controlRoles',
+    icon: 'safety',
+    access: 'canControlRolesView',
+    component: './control-roles',
+  },
+  {
     path: '/custom-client',
     name: 'customClients',
     icon: 'form',
