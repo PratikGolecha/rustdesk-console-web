@@ -30,7 +30,10 @@ export const useStyles = createStyles(({ token }) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 16,
+    marginBottom: 24,
+  },
+  passkeyButton: {
+    marginBottom: 24,
   },
   forgotPassword: {
     color: token.colorPrimary,
