@@ -159,8 +159,10 @@ const ApiTokens: React.FC = () => {
         defaultMessage: 'Expires',
       }),
       dataIndex: 'expires_at',
-      valueType: 'dateTime',
-      renderText: (value) => value || never,
+      render: (_, record) =>
+        record.expires_at
+          ? new Date(record.expires_at).toLocaleString()
+          : never,
     },
     {
       title: intl.formatMessage({
