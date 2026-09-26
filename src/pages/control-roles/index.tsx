@@ -36,7 +36,7 @@ import {
  */
 const ControlRoles: React.FC = () => {
   const intl = useIntl();
-  const access = useAccess() as Record<string, boolean>;
+  const access = useAccess();
   const { message: msgApi } = App.useApp();
   const [roles, setRoles] = useState<ControlRoleItem[]>([]);
   const [keys, setKeys] = useState<string[]>([]);
