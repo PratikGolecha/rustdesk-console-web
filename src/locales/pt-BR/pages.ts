@@ -396,6 +396,7 @@ export default {
     '{count} membros poderão ser gerenciados por administradores delegados.',
   'pages.roles.resource.users': 'Usuários',
   'pages.roles.resource.user_groups': 'Grupos de usuários',
+  'pages.roles.resource.access_control': 'Controle de acesso',
   'pages.roles.resource.devices': 'Dispositivos',
   'pages.roles.resource.address_books': 'Catálogos de endereços',
   'pages.roles.resource.strategies': 'Estratégias',
@@ -418,6 +419,10 @@ export default {
   'pages.roles.permission.user_groups.delete': 'Excluir grupos de usuários',
   'pages.roles.permission.user_groups.membership':
     'Gerenciar membros dos grupos de usuários',
+  'pages.roles.permission.access_control.view':
+    'Visualizar regras de controle de acesso',
+  'pages.roles.permission.access_control.edit':
+    'Editar regras de controle de acesso',
   'pages.roles.permission.devices.view': 'Visualizar dispositivos',
   'pages.roles.permission.devices.edit': 'Editar detalhes dos dispositivos',
   'pages.roles.permission.devices.status': 'Alterar status dos dispositivos',

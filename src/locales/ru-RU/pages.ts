@@ -389,6 +389,7 @@ export default {
     'Участники: {count}; ими смогут управлять делегированные администраторы.',
   'pages.roles.resource.users': 'Пользователи',
   'pages.roles.resource.user_groups': 'Группы пользователей',
+  'pages.roles.resource.access_control': 'Контроль доступа',
   'pages.roles.resource.devices': 'Устройства',
   'pages.roles.resource.address_books': 'Адресные книги',
   'pages.roles.resource.strategies': 'Стратегии',
@@ -414,6 +415,10 @@ export default {
   'pages.roles.permission.user_groups.delete': 'Удаление групп пользователей',
   'pages.roles.permission.user_groups.membership':
     'Управление составом групп пользователей',
+  'pages.roles.permission.access_control.view':
+    'Просмотр правил контроля доступа',
+  'pages.roles.permission.access_control.edit':
+    'Изменение правил контроля доступа',
   'pages.roles.permission.devices.view': 'Просмотр устройств',
   'pages.roles.permission.devices.edit':
     'Редактирование сведений об устройствах',

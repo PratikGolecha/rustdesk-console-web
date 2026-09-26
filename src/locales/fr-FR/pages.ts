@@ -948,6 +948,10 @@ export default {
   'pages.roles.permission.devices.disconnect': 'Déconnecter des appareils',
   'pages.roles.permission.devices.edit': 'Modifier les détails des appareils',
   'pages.roles.permission.devices.status': 'Changer le statut des appareils',
+  'pages.roles.permission.access_control.view':
+    "Voir les règles de contrôle d'accès",
+  'pages.roles.permission.access_control.edit':
+    "Modifier les règles de contrôle d'accès",
   'pages.roles.permission.devices.view': 'Voir les appareils',
   'pages.roles.permission.roles.assign': 'Attribuer des rôles',
   'pages.roles.permission.roles.create': 'Créer des rôles',
@@ -997,6 +1001,7 @@ export default {
     'Seul le super administrateur peut gérer les comptes protégés.',
   'pages.roles.resource.address_books': "Carnets d'adresses",
   'pages.roles.resource.audit': 'Audit',
+  'pages.roles.resource.access_control': "Contrôle d'accès",
   'pages.roles.resource.devices': 'Appareils',
   'pages.roles.resource.other': 'Autre',
   'pages.roles.resource.roles': 'Rôles',

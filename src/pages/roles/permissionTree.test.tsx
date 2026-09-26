@@ -21,6 +21,8 @@ const catalogCodes = [
   'user_groups.edit',
   'user_groups.delete',
   'user_groups.membership',
+  'access_control.view',
+  'access_control.edit',
   'devices.view',
   'devices.edit',
   'devices.status',

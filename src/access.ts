@@ -38,6 +38,8 @@ export default function access(
     canUserGroupsEdit: hasPermission('user_groups.edit'),
     canUserGroupsDelete: hasPermission('user_groups.delete'),
     canUserGroupsMembership: hasPermission('user_groups.membership'),
+    canAccessControlView: hasPermission('access_control.view'),
+    canAccessControlEdit: hasPermission('access_control.edit'),
     canAddressBooksView: hasPermission('address_books.view'),
     canAddressBooksEdit: hasPermission('address_books.edit'),
     canAddressBooksShare: hasPermission('address_books.share'),

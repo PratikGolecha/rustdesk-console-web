@@ -1,6 +1,7 @@
 import {
   DeleteOutlined,
   EditOutlined,
+  SafetyCertificateOutlined,
   PlusOutlined,
   TeamOutlined,
 } from '@ant-design/icons';
@@ -24,6 +25,7 @@ import {
   getUserGroupList,
   updateUserGroup,
 } from '@/services/rustdesk-console/userGroup';
+import UserGroupAccessModal from './components/UserGroupAccessModal';
 import UserGroupMembersModal from './components/UserGroupMembersModal';
 
 const UserGroupList: React.FC = () => {
@@ -37,6 +39,10 @@ const UserGroupList: React.FC = () => {
     null,
   );
   const [membersGroup, setMembersGroup] = useState<API.UserGroupItem | null>(
+    null,
+  );
+
+  const [accessGroup, setAccessGroup] = useState<API.UserGroupItem | null>(
     null,
   );
 
@@ -171,9 +177,10 @@ const UserGroupList: React.FC = () => {
         <FormattedMessage id="pages.common.action" defaultMessage="Action" />
       ),
       valueType: 'option',
-      width: 200,
+      width: 320,
       fixed: 'right',
       hideInTable:
+        !access.canAccessControlView &&
         !access.canUserGroupsMembership &&
         !access.canUserGroupsEdit &&
         !access.canUserGroupsDelete,
@@ -189,6 +196,19 @@ const UserGroupList: React.FC = () => {
               <FormattedMessage
                 id="pages.userGroups.members"
                 defaultMessage="Members"
+              />
+            </Button>
+          )}
+          {access.canAccessControlView && (
+            <Button
+              type="link"
+              size="small"
+              icon={<SafetyCertificateOutlined />}
+              onClick={() => setAccessGroup(record)}
+            >
+              <FormattedMessage
+                id="pages.userGroups.access"
+                defaultMessage="Access"
               />
             </Button>
           )}
@@ -412,6 +432,13 @@ const UserGroupList: React.FC = () => {
           />
         </Form.Item>
       </ModalForm>
+
+      <UserGroupAccessModal
+        open={!!accessGroup}
+        group={accessGroup}
+        canEdit={!!access.canAccessControlEdit}
+        onOpenChange={(open) => !open && setAccessGroup(null)}
+      />
 
       <UserGroupMembersModal
         open={!!membersGroup}
