@@ -715,12 +715,44 @@ declare namespace API {
     name: string;
     note?: string;
     config_options?: Record<string, string>;
+    /** Accept option keys that are not in the options catalog. */
+    allow_custom?: boolean;
   };
 
   type UpdateStrategyParams = {
     name?: string;
     note?: string;
     config_options?: Record<string, string>;
+    allow_custom?: boolean;
+  };
+
+  type StrategyOptionDef = {
+    key: string;
+    category: 'permissions' | 'security' | 'network' | 'ui';
+    label: string;
+    description: string;
+    type: 'bool' | 'enum' | 'int' | 'string';
+    values?: string[];
+    min?: number;
+    max?: number;
+    default: string;
+    feature: string;
+  };
+
+  type StrategyPreset = {
+    id: string;
+    label: string;
+    description: string;
+    options: Record<string, string>;
+  };
+
+  type StrategyOptionsCatalog = {
+    version: number;
+    client_version: string;
+    categories: StrategyOptionDef['category'][];
+    options: StrategyOptionDef[];
+    presets: StrategyPreset[];
+    blocked_keys: string[];
   };
 
   type StrategyAssignParams = {

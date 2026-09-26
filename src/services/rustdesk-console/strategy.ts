@@ -41,6 +41,12 @@ export async function getStrategyCandidates(
   );
 }
 
+export async function getStrategyOptionsCatalog() {
+  return request<API.StrategyOptionsCatalog>('/api/strategies/options-catalog', {
+    method: 'GET',
+  });
+}
+
 export async function getStrategy(guid: string) {
   return request<API.StrategyItem>(`/api/strategies/${guid}`, {
     method: 'GET',
